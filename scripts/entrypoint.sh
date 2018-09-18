@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [  "${CONFIG_CREATE}" = "True" ]; then
+        exec "$@"
+fi
+
+
 export CONFIG_PATH="${CONFIG_PATH:-/home/rclone/.config/rclone/rclone.conf}"
 
 export RCLONE_BACKEND_PASS="${OVERRIDE_RCLONE_BACKEND_PASS:-password}"
