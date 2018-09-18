@@ -14,7 +14,7 @@ RUN   apk update && apk add --no-cache curl unzip bash && \
       curl  -L https://github.com/ncw/rclone/releases/download/v${VERSION}/rclone-v${VERSION}-linux-amd64.zip -o /tmp/rclone-v${VERSION}-linux-amd64.zip && \
       unzip /tmp/rclone-v${VERSION}-linux-amd64.zip -d /tmp/ && \
       cd /tmp/rclone-* &&  cp -r . /opt/rclone && \
-      chown ${USER}:${GROUP} -R /opt/rclone /home/${USER}/.config/rclone/ & \
+      chown ${USER}:${GROUP} -R /opt/rclone /home/${USER}/.config/rclone/ && \
       rm -rf /tmp/
 
 COPY /scripts/entrypoint.sh /
