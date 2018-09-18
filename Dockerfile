@@ -12,7 +12,7 @@ RUN   set -xe && addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USE
       mkdir -p /opt/rclone /home/${USER}/.config/rclone/ && \
       curl  -L https://github.com/ncw/rclone/releases/download/v${VERSION}/rclone-v${VERSION}-linux-amd64.zip -o /tmp/rclone-v${VERSION}-linux-amd64.zip && \
       unzip /tmp/rclone-v${VERSION}-linux-amd64.zip -d /tmp/ && \
-      cd /tmp/rclone-* &  cp -r . /opt/rclone && \
+      cd /tmp/rclone-* &&  cp -r . /opt/rclone && \
       chown ${USER}:${GROUP} -R /opt/rclone /home/${USER}/.config/rclone/ & \
       rm -rf /tmp/
 
