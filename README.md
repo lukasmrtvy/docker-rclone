@@ -6,5 +6,5 @@ docker run -d --network my-bridge --name rclone -v rclone_data:/home/rclone/.con
 
 # How to create config? 
 
-`docker run --rm -it -v rclone_data:/home/rclone/.config/rclone  -e CONFIG_CREATE="True" lukasmrtvy/docker-rclone:latest /opt/rclone/rclone config create myremote drive --drive-root-folder-id="1Aw9xxxxxxxxxxxxxxxxxxxxx_Hmg"
+`docker run --rm -it --network host -v rclone_data:/home/rclone/.config/rclone  -e CONFIG_CREATE="True" lukasmrtvy/docker-rclone:latest /opt/rclone/rclone config 
  `
