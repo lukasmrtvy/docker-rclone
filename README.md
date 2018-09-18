@@ -15,6 +15,14 @@ or
 docker run --rm -it --network host -v rclone_data:/home/rclone/.config/rclone  -e CONFIG_CREATE="True" lukasmrtvy/docker-rclone:latest /opt/rclone/rclone config
 `
 
+# Mandatory config
+- /home/rclone/.config/rclone/rclone.conf
+
+# Mandatory variables
+
+- RCLONE_BACKEND_PROTOCOL
+- RCLONE_BACKEND
+
 # Env variables
 
 - RCLONE_BACKEND_USER (default: user)
