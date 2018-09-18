@@ -16,11 +16,11 @@ docker run --rm -it --network host -v rclone_data:/home/rclone/.config/rclone  -
 
 # Env variables
 
-RCLONE_BACKEND_USER (default: user)
-RCLONE_BACKEND_PASS (default: password)
-RCLONE_BACKEND_PATH (default: /)
-RCLONE_BACKEND_ADDR (default: 0.0.0.0:8080)
+- RCLONE_BACKEND_USER (default: user)
+- RCLONE_BACKEND_PASS (default: password)
+- RCLONE_BACKEND_PATH (default: /)
+- RCLONE_BACKEND_ADDR (default: 0.0.0.0:8080)
 
 or
 
--e OVERRIDE_OPTIONS="--user=admin --pass=admin --addr=0.0.0.0:8080"
+`-e OVERRIDE_OPTIONS="--user=admin --pass=admin --addr=0.0.0.0:8080"`
