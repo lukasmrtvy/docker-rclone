@@ -29,6 +29,7 @@ docker run --rm -it --network host -v rclone_data:/home/rclone/.config/rclone  -
 - RCLONE_BACKEND_PASS (default: password)
 - RCLONE_BACKEND_PATH (default: /)
 - RCLONE_BACKEND_ADDR (default: 0.0.0.0:8080)
+- CONFIG_CREATE="True" ( for bypass entrypoint or `--entrypoint sh rclone:latest /opt/rclone/rclone config create `)
 
 or
 
