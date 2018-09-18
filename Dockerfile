@@ -30,4 +30,4 @@ VOLUME /home/${USER}/.config/rclone/
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["sh","-c","/opt/rclone/rclone serve \"${RCLONE_BACKEND_PROTOCOL}\" --pass \"${RCLONE_BACKEND_PASS}\"  --addr \"${RCLONE_BACKEND_ADDR}\"   \"${RCLONE_BACKEND}\":\"${RCLONE_BACKEND_PATH}\" "]
+CMD ["sh","-c","/opt/rclone/rclone serve \"${RCLONE_BACKEND_PROTOCOL}\" --user \"${RCLONE_BACKEND_USER}\" --pass \"${RCLONE_BACKEND_PASS}\"  --addr \"${RCLONE_BACKEND_ADDR}\"   \"${RCLONE_BACKEND}\":\"${RCLONE_BACKEND_PATH}\" "]
