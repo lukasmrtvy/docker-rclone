@@ -7,6 +7,7 @@ fi
 
 export CONFIG_PATH="${CONFIG_PATH:-/home/rclone/.config/rclone/rclone.conf}"
 
+export RCLONE_BACKEND_USER="${RCLONE_BACKEND_USER:-user}"
 export RCLONE_BACKEND_PASS="${RCLONE_BACKEND_PASS:-password}"
 export RCLONE_BACKEND_PATH="${RCLONE_BACKEND_PATH:-/}"
 export RCLONE_BACKEND_ADDR="${RCLONE_BACKEND_ADDR:-0.0.0.0:8080}"
