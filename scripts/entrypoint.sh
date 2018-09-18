@@ -16,7 +16,7 @@ export RCLONE_BACKEND_OPTIONS=("${OVERRIDE_OPTIONS}")
 
 if [ -f "${CONFIG_PATH}" ]; then
         if [ -n "${RCLONE_BACKEND}" ] && [ -n "${RCLONE_BACKEND_PROTOCOL}" ];then
-                exec "$@"
+                exec $(eval echo "$@")
         else
                 exit 1
         fi
