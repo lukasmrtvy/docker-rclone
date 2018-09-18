@@ -7,7 +7,7 @@ ENV GROUP rclone
 
 ENV VERSION=1.43.1
 
-RUN   addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP} && \ 
+RUN   set -xe && addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP} && \ 
       apk update && apk add --no-cache curl unzip bash && \ 
       mkdir -p /opt/rclone /home/${USER}/.config/rclone/ && \
       curl  -L https://github.com/ncw/rclone/releases/download/v${VERSION}/rclone-v${VERSION}-linux-amd64.zip -o /tmp/rclone-v${VERSION}-linux-amd64.zip && \
