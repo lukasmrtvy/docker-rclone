@@ -5,8 +5,22 @@
 rclone docker container for backend serving purpose only
 
 # How to run this?
-`
-docker run -d --network my-bridge --name rclone -v rclone_data:/home/rclone/.config/rclone -p 8080:8080 -e RCLONE_BACKEND_PROTOCOL="restic" -e RCLONE_BACKEND="myremote" -e RCLONE_BACKEND_PATH="/backup" lukasmrtvy/docker-rclone:latest `
+```
+docker run -d \
+--name rclone \
+--network network \
+--restart=unless-stopped \
+--label "traefik.enable=true" \
+--label "traefik.frontend.rule=Host:rclone.example.com" \
+--label "traefik.port=8080" \
+-e RCLONE_BACKEND_PROTOCOL="restic" \
+-e RCLONE_BACKEND="gdrive" \
+-e RCLONE_BACKEND_PATH="/backup" \
+-e RCLONE_BACKEND_USER=admin \
+-e RCLONE_BACKEND_PASS=admin \
+-v rclone_data:/home/rclone/.config/rclone \
+rclone
+```
 
 # How to create config? 
 
