@@ -5,7 +5,7 @@ ENV GID 1337
 ENV USER rclone
 ENV GROUP rclone
 
-ENV VERSION=1.48.1
+ENV VERSION=1.48.0
 
 RUN   addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP} && \ 
       apk add -U curl unzip bash && \ 
